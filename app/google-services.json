@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "546867356167",
+    "firebase_url": "https://adminapp-9210d.firebaseio.com",
+    "project_id": "adminapp-9210d",
+    "storage_bucket": "adminapp-9210d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546867356167:android:0ffd75a94057368d",
+        "android_client_info": {
+          "package_name": "com.example.ramya.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546867356167-jjeeg8lslgo3cihir42dikbcagm3anp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ramya.adminapp",
+            "certificate_hash": "36341b46dce63f0e2e351baf69bcf29df8dd5f35"
+          }
+        },
+        {
+          "client_id": "546867356167-b6od37ptdq8t1lol44gdka8vgucsao3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb3QO2IDA4N7RsEkclCQ-Skith856nMuY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546867356167-b6od37ptdq8t1lol44gdka8vgucsao3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
