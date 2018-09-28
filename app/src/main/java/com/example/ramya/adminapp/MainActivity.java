@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.MimeTypeMap;
@@ -99,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
             StorageReference ref = mStorageRef.child(FB_STORAGE_PATH + System.currentTimeMillis()+"."+getImageExt(imgUri));
 
             ref.putFile(imgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                public static final String TAG = "MainActivity" ;
+
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -107,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                     ImageUpload imageUpload = new ImageUpload(ImageName.getText().toString(),taskSnapshot.getDownloadUrl().toString());
                     String uploadId = mDatabaseRef.push().getKey();
                     mDatabaseRef.child(uploadId).setValue(imageUpload);
+                    String url = taskSnapshot.getDownloadUrl().toString();
+                    Log.d(TAG, "onSuccess: success"+url);
+
                 }
             })
                     .addOnFailureListener(new OnFailureListener() {
